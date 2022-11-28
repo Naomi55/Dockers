@@ -1,0 +1,24 @@
+//Docker image
+//A Docker image is an immutable (unchangeable) file that contains the source code, libraries, dependencies, tools, and other files needed for an application to run.
+
+//Docker file
+//A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. 
+
+1) We need to create our build context (Este directorio es el que contiene todos los archivos necesarios para construir nuestra imagen)
+mkdir -p  ~/Sites/hello-world
+cd ~/Sites/hello-world
+echo "hello" > hello
+
+2)In this directory we need to create the Dockerfile
+vi dockerfile
+FROM busybox
+COPY /hello /
+RUN cat /hello
+
+Explicación
+FROM	Indica la imagen base sobre la que se basa esta imagen
+COPY	Copia un archivo del build context y lo guarda en la imagen
+RUN	Ejecuta el comando indicado durante el proceso de creación de imagen.
+
+3)Create the image with this command
+docker build -t helloapp:v1 .
