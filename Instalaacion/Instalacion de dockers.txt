@@ -4,4 +4,5 @@ https://docs.docker.com/engine/install/ubuntu/
 2. Post steps
 https://docs.docker.com/engine/install/linux-postinstall/
 
-
+3.Create conection client-server
+https://docs.google.com/presentation/d/1ynGfFZyfaKEJYUiErQ433vAlE1nPsGyLs5AsrAKSjgg/edit#slide=id.g1567f95fa54_0_160
